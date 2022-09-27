@@ -55,6 +55,9 @@ INSTALLED_APPS = [
     'accounts.apps.AccountsConfig',
     'pages.apps.PagesConfig',
     'products.apps.ProductsConfig',
+
+    # Rosetta app
+    'rosetta',
 ]
 
 SITE_ID = 1
@@ -136,12 +139,20 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 # Internationalization
 # https://docs.djangoproject.com/en/4.0/topics/i18n/
 
+# I18n
 LANGUAGE_CODE = 'en-us'
+# LANGUAGE_CODE = 'fa'
+
+LANGUAGES = (
+    ('en', 'english'),
+    ('fa', 'persian'),
+)
 
 TIME_ZONE = 'UTC'
 
 USE_I18N = True
-
+# Localization l10n
+USE_L10N = True
 USE_TZ = True
 
 

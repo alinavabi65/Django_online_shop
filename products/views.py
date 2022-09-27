@@ -25,9 +25,9 @@ class ProductDetailView(generic.DetailView):
         return context
 
 
-def test_translation(request):
-    result = _('hello')
-    return HttpResponse(result)
+# def test_translation(request):
+#     result = _('hello')
+#     return HttpResponse(result)
 
 
 class CommentCreateView(generic.CreateView):
