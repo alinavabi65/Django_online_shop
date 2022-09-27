@@ -1,0 +1,82 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-09-27 16:43+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: .\templates\products\product_detail.html:24
+msgid "Product title"
+msgstr "توضیحات محصول"
+
+#: .\templates\products\product_detail.html:49
+msgid "Euro"
+msgstr "یورو"
+
+#: .\templates\products\product_detail.html:62
+msgid "Add To Basket"
+msgstr "اضافه به سبد"
+
+#: .\templates\products\product_detail.html:66
+msgid "categories"
+msgstr ""
+
+#: .\templates\products\product_detail.html:67
+msgid "clothing"
+msgstr ""
+
+#: .\templates\products\product_detail.html:68
+msgid "summer"
+msgstr ""
+
+#: .\templates\products\product_detail.html:69
+msgid "warm"
+msgstr ""
+
+#: .\templates\products\product_detail.html:70
+msgid "female"
+msgstr ""
+
+#: .\templates\products\product_detail.html:82
+msgid "Product Description"
+msgstr "توضیحات محصول"
+
+#: .\templates\products\product_detail.html:86
+msgid "Property"
+msgstr "خصوصیات"
+
+#: .\templates\products\product_detail.html:90
+msgid "Comments"
+msgstr "نظرات"
+
+#: .\templates\products\product_detail.html:129
+msgid "comment"
+msgstr "نظر"
+
+#: .\templates\products\product_detail.html:149
+msgid "Rated"
+msgstr "امتیاز"
+
+#: .\templates\products\product_detail.html:168
+msgid "Write your comment"
+msgstr "نظر خود را بنویسید"
+
+#: .\templates\products\product_detail.html:174
+msgid "Send"
+msgstr ""
+
+#: .\views.py:29
+msgid "hello"
+msgstr "سلام"
