@@ -2,6 +2,7 @@ from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic
 from django.http import HttpResponse
 from django.utils.translation import gettext as _
+from django.contrib import messages
 
 from .models import Product, Comment
 from .forms import CommentForm
@@ -25,9 +26,13 @@ class ProductDetailView(generic.DetailView):
         return context
 
 
-# def test_translation(request):
-#     result = _('hello')
-#     return HttpResponse(result)
+def test_translation(request):
+    result = _('hello')
+    messages.success(request, 'This is success message.')
+    messages.error(request, 'This is success message.')
+    messages.warning(request, 'This is success message.')
+    messages.info(request, 'This is success message.')
+    return render(request, 'products/testhello.html')
 
 
 class CommentCreateView(generic.CreateView):
