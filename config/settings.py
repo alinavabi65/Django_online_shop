@@ -13,6 +13,8 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 from pathlib import Path
 from environs import Env
 import os
+# for messages framework
+from django.contrib.messages import constants as messages_constance
 
 # for environment variables
 env = Env()
@@ -55,6 +57,7 @@ INSTALLED_APPS = [
     'accounts.apps.AccountsConfig',
     'pages.apps.PagesConfig',
     'products.apps.ProductsConfig',
+    'cart.apps.CartConfig',
 
     # Rosetta app
     'rosetta',
@@ -183,4 +186,12 @@ ACCOUNT_USERNAME_REQUIRED = False
 ACCOUNT_AUTHENTICATION_METHOD = 'email'
 ACCOUNT_EMAIL_REQUIRED = True
 ACCOUNT_UNIQUE_EMAIL = True
+
+
+# for messages framework
+# from django.contrib.messages import constants as messages_constance(look import)
+MESSAGE_TAGS = {
+    messages_constance.ERROR: 'danger',
+}
+
 
