@@ -1,4 +1,6 @@
 {% load static %}
+{% load i18n %}
+
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html lang="">
 <head>
@@ -80,7 +82,7 @@
                         <li class="header-toolbar__item mini-cart-item">
                             <a href="#miniCart" class="header-toolbar__btn toolbar-btn mini-cart-btn">
                                 <i class="flaticon flaticon-shopping-cart"></i>
-                                <sup class="mini-cart-count">2</sup>
+                                <sup class="mini-cart-count">{{ cart|length }}</sup>
                             </a>
                         </li>
                         <li class="header-toolbar__item user-info">
@@ -88,15 +90,18 @@
                                 <i class="flaticon flaticon-user"></i>
                             </a>
                             <ul class="user-info-menu">
-                                <li>
-                                    <a class="text-left" href="{% url 'account_signup' %}">Account</a>
-                                </li>
-                                <li>
-                                    <a class="text-left" href="cart.html">Cart</a>
-                                </li>
-                                <li>
-                                    <a class="text-left" href="wishlist.html">Favorites</a>
-                                </li>
+                                {% if user.is_authenticated %}
+                                    <li>
+                                        <a class="text-left" href="{% url 'account_logout' %}">{% trans 'logout' %}</a>
+                                    </li>
+                                {% else %}
+                                    <li>
+                                        <a class="text-left" href="{% url 'account_login' %}">{% trans 'login' %}</a>
+                                    </li>
+                                    <li>
+                                        <a class="text-left" href="{% url 'account_signup' %}">{% trans 'signup' %}</a>
+                                    </li>
+                                {% endif %}
                                 <li>
                                     <a class="text-left" href="order-tracking.html">Order history</a>
                                 </li>

@@ -6,6 +6,7 @@ from django.contrib import messages
 
 from .models import Product, Comment
 from .forms import CommentForm
+from cart.forms import AddToCartProductForm
 
 
 class ProductListView(generic.ListView):
@@ -49,6 +50,8 @@ class CommentCreateView(generic.CreateView):
         product_id = int(self.kwargs['product_id'])
         products = get_object_or_404(Product, id=product_id)
         obj.products = products
+
+        messages.success(self.request, _('Comment successfully created'))
 
         return super().form_valid(form)
 
