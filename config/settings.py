@@ -31,7 +31,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = "DJANGO_SECRET_KEY=django-insecure-b764$#(&o4o((cvy!z^nsseq5@erq#e^0%5r5a(%c24*f^*sde"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = env.bool("DJANGO_DEBUG")
+DEBUG = True
 
 ALLOWED_HOSTS = ['enigmatic-island-22885.heroku.com']
 
