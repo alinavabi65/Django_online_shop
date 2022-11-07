@@ -25,11 +25,11 @@
     <link rel="stylesheet" href="{% static 'css/main.css' %}">
 </head>
 <body>
-{% if user.is_authenticated %}
-    Hello {{ user.username }} <a href="{% url 'account_logout' %}">logout</a>
-{% else %}
-    <a href="{% url 'account_login' %}">login</a>| <a href="{% url 'account_signup' %}">signup</a>
-{% endif %}
+{#{% if user.is_authenticated %}#}
+{#    Hello {{ user.username }} <a href="{% url 'account_logout' %}">logout</a>#}
+{#{% else %}#}
+{#    <a href="{% url 'account_login' %}">login</a>| <a href="{% url 'account_signup' %}">signup</a>#}
+{#{% endif %}#}
 
 <!-- Header Start -->
 <header class="header">
@@ -41,7 +41,7 @@
                         <div class="site-branding" style="margin-right: 30px;">
                             <a href="{% url 'product_list' %}" class="logo">
                                 <figure class="logo--normal d-none d-sm-block">
-                                    <img class="px-5" src="assets/img/codingyar_logo.png"
+                                    <img class="px-5" src="{% static 'img/codingyar_logo.png' %}"
                                          style="max-height: 50px; margin-bottom: -15px;" alt="Logo">
                                 </figure>
                             </a>

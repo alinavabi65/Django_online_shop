@@ -47,6 +47,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     # third party apps
+    'jalali_date',
+    # Rosetta app
+    'rosetta',
     # crispy forms
     'crispy_forms',
     # django-allauth
@@ -59,8 +62,6 @@ INSTALLED_APPS = [
     'products.apps.ProductsConfig',
     'cart.apps.CartConfig',
 
-    # Rosetta app
-    'rosetta',
 ]
 
 SITE_ID = 1
@@ -180,8 +181,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # accounts config
 AUTH_USER_MODEL = 'accounts.CustomUser'
-LOGIN_REDIRECT_URL = 'home'
-LOGOUT_REDIRECT_URL = 'home'
+LOGIN_REDIRECT_URL = 'product_list'
+LOGOUT_REDIRECT_URL = 'product_list'
 
 # crispy form config
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
