@@ -33,7 +33,7 @@ SECRET_KEY = "DJANGO_SECRET_KEY=django-insecure-b764$#(&o4o((cvy!z^nsseq5@erq#e^
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['enigmatic-island-22885.herokuapp.com']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -105,10 +105,10 @@ WSGI_APPLICATION = 'config.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'd6qpordhee1dph',
-        'USER': 'rvkefmknoroyhx',
-        'PASSWORD': '1afd1c8eaafa03cf95de34f9e0a37c59697448e5af05bc46ba79a7ddddde7194',
-        'HOST': 'ec2-3-226-163-72.compute-1.amazonaws.com',
+        'NAME': 'd91foh3ck51d0o',
+        'USER': 'uojtlyetusipnw',
+        'PASSWORD': '3a64d8de57a959ae349705dac3cd5105b50073be47446f7fb9d0a145713df41d',
+        'HOST': 'ec2-3-209-39-2.compute-1.amazonaws.com',
         'PORT': 5432
         # 'ENGINE': 'django.db.backends.sqlite3',
         # 'NAME': BASE_DIR / 'db.sqlite3',
