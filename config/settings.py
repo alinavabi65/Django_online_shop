@@ -33,7 +33,7 @@ SECRET_KEY = "DJANGO_SECRET_KEY=django-insecure-b764$#(&o4o((cvy!z^nsseq5@erq#e^
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['enigmatic-island-22885.heroku.com']
+ALLOWED_HOSTS = ['enigmatic-island-22885.herokuapp.com']
 
 
 # Application definition
