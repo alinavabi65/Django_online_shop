@@ -11,6 +11,8 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
 from pathlib import Path
+
+import django_heroku
 from environs import Env
 import os
 # for messages framework
@@ -33,7 +35,7 @@ SECRET_KEY = env("DJANGO_SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = env.bool("DJANGO_DEBUG")
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['enigmatic-island-22885.heroku.com']
 
 
 # Application definition
@@ -105,10 +107,10 @@ WSGI_APPLICATION = 'config.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'postgres',
-        'USER': 'postgres',
-        'PASSWORD': 'postgres',
-        'HOST': 'db',
+        'NAME': 'd4adgqt3ujd400',
+        'USER': 'okigearwrrylbm',
+        'PASSWORD': 'e08ceca60b621739c3740961a90b91c661af54724514ccaea9b4ccd2ecb2cedc',
+        'HOST': 'ec2-3-219-135-162.compute-1.amazonaws.com',
         'PORT': 5432
         # 'ENGINE': 'django.db.backends.sqlite3',
         # 'NAME': BASE_DIR / 'db.sqlite3',
@@ -168,6 +170,7 @@ USE_TZ = True
 # static file Config
 STATIC_URL = 'static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'), ]
+django_heroku.settings(locals())
 
 # media file config
 MEDIA_URL = '/media/'
