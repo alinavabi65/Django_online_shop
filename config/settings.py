@@ -11,8 +11,6 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
 from pathlib import Path
-
-import django_heroku
 from environs import Env
 import os
 # for messages framework
@@ -170,7 +168,6 @@ USE_TZ = True
 # static file Config
 STATIC_URL = 'static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'), ]
-django_heroku.settings(locals())
 
 # media file config
 MEDIA_URL = '/media/'
